@@ -1,4 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>About Page</h1>
+    <h3>Address: Blogger HQ, Gloden Plaza, Dubai-110033</h3>
+    <h3>Email: admin@demo.com</h3>
+    <h3>Phone: 0180-2500001, 0180-2600001</h3>
+    <h3>Toll Free Number: 1800-000-000</h3>
+    <div>
+        <h1> Users List: </h1>
+        {% for user in users %}
+            <article class="media content-section">
+              <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' +
+              user.image_file) }}">
+              <div class="media-body">
+                <div class="article-metadata">
+                  <a class="mr-2" href="#">{{ user.username }}</a>
+                </div>
+              </div>
+            </article>
+        {% endfor %}
+    </div>
 {% endblock content %}

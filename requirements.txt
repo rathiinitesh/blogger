@@ -4,3 +4,6 @@ wtforms
 email-validator
 flask-sqlalchemy
 flask-login
+pillow
+itsdangerous
+flask-mail
